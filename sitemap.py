@@ -85,7 +85,7 @@ def crawl(page, prev=None):
     except TldDomainNotFound as tlde:
         ###print('...rejected')
         rejected.add(page)
-        ###print(prev) # - just figuring out where links were poorly formed
+        print(prev) # - just figuring out where links were poorly formed
         return
 
     # Ensure we're still in the same domain.
@@ -118,6 +118,7 @@ def crawl(page, prev=None):
 def main(argv=[]):
     # global is ugly ofc. but suits this particular task.
     global collected
+    global rejected
     global domain
 
     try:

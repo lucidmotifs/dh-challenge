@@ -140,11 +140,11 @@ def main(argv=[]):
 
     crawl(target.encode("utf-8"))
 
-    output = "\n".join(sorted(collected))
     print("\n")
-    print("Number of links collect: {}".format(len(collected)))
+    print("Number of links collected: {}".format(len(collected)))
     print("Number of links rejected: {}".format(len(rejected)))
     print("Displaying Sorted Sitemap...\n")
+    output = "\n".join(sorted(collected))
     print(output)
 
     return 0

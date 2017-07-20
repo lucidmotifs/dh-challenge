@@ -85,7 +85,7 @@ def crawl(page, prev=None):
     except TldDomainNotFound as tlde:
         ###print('...rejected')
         rejected.add(page)
-        print(prev) # - just figuring out where links were poorly formed
+        print("This page has a malformed link: {}".format(prev)) # - just figuring out where links were poorly formed
         return
 
     # Ensure we're still in the same domain.
